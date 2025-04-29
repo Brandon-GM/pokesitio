@@ -1,0 +1,14 @@
+Hola a todos.
+
+Este proyecto muestra hasta los primeros 151 pokemons que son los de la primera generacion.
+Pero puede mostar mas si en el archivo "js\mostrarPokemons.js" el valor de 151 es remplazado por un numero mas grande.
+
+De igual manera el boton de Pokemon Aleatorio somo mostraria al azar un pokemon dentro de los primeros 151 pokemons.
+Pero igual si se cambia el valor de 151 por un numero mas grande en el archivo "js\pokemonAleatorio.js" mostraria un rango mayor.
+
+El buscador si muestra pokemons de generaciones posteriores a la primera si se ingresa numeros mayores al 151.
+
+Solo queria alcarar esta parte.
+
+Saludos cordiales :3
+

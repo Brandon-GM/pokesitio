@@ -1,0 +1,77 @@
+/* Estilos de colores */
+.main-content {
+    padding-top: 1000px; /* Ajusta este valor a la altura de tu nav */
+  }
+
+.enlace-nav {
+    color: white;
+    /* font-weight: bold; */
+}
+
+.form-control.me-3[type="search"] {
+    width: 320px; /* Ajusta el ancho de la barra de busqueda en navbar*/
+  }
+
+.container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre botones */
+    justify-content: center;
+  }
+
+.divTodos{
+    margin-top: 100px;
+    margin-left: 100px; 
+    margin-right: 100px;
+}
+
+.btn-header {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
+
+.botonPokemon {
+    font-weight: bold;
+    border-radius: 1rem;
+    padding-block: 1rem;
+    text-transform: uppercase;
+    width: 160px;
+}
+
+
+.modalFicha{
+    text-align: center;
+    margin: 30px;
+}
+
+.modalNegritas{
+    font-weight: bold;
+}
+
+.fondoRedondo{
+    color: black;
+    background-color: #e6e6e6;
+    border-radius: 8px;          
+    display: inline-block; 
+    padding: 6px 12px;     
+}
+
+.error{
+    color: rgb(180, 0, 0);
+}
+
+.barraNavegacion{
+    background-color: #036687;
+}
+
+.botonBuscar{
+    background-color: #e4e4e4;
+
+}
+
+.centrartexto{
+    text-align: center;
+    font-weight: bold;
+
+}

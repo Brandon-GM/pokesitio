@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Sitio</title>
+
+    <!-- Icono de pokebola -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap 5.3.5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <!-- Mis estilos de css -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/coloresTiposPokemons.css">
+
+
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACION EN LA PARTE SUPERIOR DE LA PANTALLA -->
+    <nav class="navbar navbar-expand-lg fixed-top barraNavegacion" data-bs-theme="light">
+        <div class="container-fluid" style="margin-left: 50px; margin-right: 50px;">
+
+          <a class="navbar-brand" href="javascript:window.location.reload();"><img src="img/pokedex_logo.png" alt="Imagen letras POKEDEX" width="150" height="50"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link enlace-nav" id="mostrarLista" href="#"><i class="fa-solid fa-list"></i> Mostrar lista </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link enlace-nav" href="#" id="pokemonAleatorio"><i class="fa-solid fa-question"></i> Ir a Pokémon aleatorio</a>
+              </li>
+
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle enlace-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-circle-half-stroke"></i> Tema
+                </a>
+                <ul class="dropdown-menu barraNavegacion">
+                  <li><a class="dropdown-item enlace-nav" href="#" id="modoClaro"><i class="fa-regular fa-sun"></i> Claro</a></li>
+                  <li><a class="dropdown-item enlace-nav" href="#" id="modoOscuro"><i class="fa-solid fa-moon"></i> Oscuro</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-3 botonBuscar" type="search" id="pokemonValue" placeholder="Ingresa el ID o el nombre del pokemon" aria-label="Search">
+              <button class="btn btn-outline-light" id="btnBuscar">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- BARRA DE NAVEGACION EN LA PARTE SUPERIOR DE LA PANTALLA -->
+
+    
+    
+        <div id="tiposPokemons" style="display: none; margin-left: 100px; margin-right: 100px;">
+            <br><br><br><br>
+
+            <h3 style="font-weight: bold;">Lista de tipos de Pokemons</h4>
+                <div class="container-buttons">
+                    <button type="button" class="btn todos" id="mostrarTodos">Mostrar todos</button>
+                    <button type="button" class="btn btnTipo normal" id="normal">Normal</button>
+                    <button type="button" class="btn btnTipo fire" id="fire">Fire</button>
+                    <button type="button" class="btn btnTipo water" id="water">Water</button>
+                    <button type="button" class="btn btnTipo grass" id="grass">Grass</button>
+                    <button type="button" class="btn btnTipo electric" id="electric">Electric</button>
+                    <button type="button" class="btn btnTipo ice" id="ice">Ice</button>
+                    <button type="button" class="btn btnTipo fighting" id="fighting">Fighting</button>
+                    <button type="button" class="btn btnTipo poison" id="poison">Poison</button>
+                    <button type="button" class="btn btnTipo ground" id="ground">Ground</button>
+                    <button type="button" class="btn btnTipo flying" id="flying">Flying</button>
+                    <button type="button" class="btn btnTipo psychic" id="psychic">Psychic</button>
+                    <button type="button" class="btn btnTipo bug" id="bug">Bug</button>
+                    <button type="button" class="btn btnTipo rock" id="rock">Rock</button>
+                    <button type="button" class="btn btnTipo ghost" id="ghost">Ghost</button>
+                    <button type="button" class="btn btnTipo dark" id="dark">Dark</button>
+                    <button type="button" class="btn btnTipo dragon" id="dragon">Dragon</button>
+                    <button type="button" class="btn btnTipo steel" id="steel">Steel</button>
+                    <button type="button" class="btn btnTipo fairy" id="fairy">Fairy</button>
+                </div>
+            <br>
+        </div>
+    
+    <main>
+        
+        <div id="todos" class="divTodos">
+            <h4 class="centrartexto">¡Haz click en un pokemon para ver su ficha tecnica!</h4>
+            <div class="container-buttons" id="listaPokemon">
+                
+            </div>
+        </div>
+
+    </main>
+
+    <!-- BOTON OCULTO PARA MOSTRAR LA VENTANA MODAL-->
+    <button type="button" id="mostrarModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pokemonModal" hidden>
+        Mostrar Ventan Modal
+    </button>
+  
+  <!-- VENTANA MODAL CON EL POKEMON ALEATORIO O ESPECIFICO O DEL BOTON DE BUSQUEDA-->
+  <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 modalNegritas" id="exampleModalLabel">FICHA TECNICA</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modalFicha" id="pokemonInfo">
+            <!-- AQUI SALDRA TODA LA INFORMACION DEL POKEMONs-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Muestra en la pagina los 151 primeros pokemons -->
+    <script src="js/cargarPokemonFicha.js"></script>
+    
+
+    <!-- FUNCION PARA MOSTRAR EL POKEMON EL LA FICHA TECNICA -->
+    <script src="js/mostrarPokemons.js"></script>
+
+    <!-- Para mostrar un pokemon aleatorio -->
+    <script src="js/pokemonAleatorio.js"></script>
+
+    <!-- Para ocultar y mostrar la lista con los tipos de pokemons -->
+    <script src="js/ocultarLista.js"></script>
+
+    <!-- Muestra la ficha tecnica de un pokemon seleccionado -->
+    <script src="js/seleccionPokemon.js"></script>
+
+    <!-- BUSCA Y MUETRA LA FICHA TECNICA DEL POKEMON EN LA BARRA DE BUSQUEDA -->
+    <script src="js/buscadorPokemon.js"></script>
+
+    <!-- ACTIVAR/DESACTIVAR EL MODO OSCURO-->
+    <script src="js/modoOscuro.js"></script>
+
+</body>
+</html>

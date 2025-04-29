@@ -1,0 +1,115 @@
+/* Colores de fondo de los botones y en general para los tipo de pokemons*/
+
+.todos {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.normal{
+    background-color: #A8A878;
+    color: black;
+    font-weight: bold;
+}
+
+.fire {
+    background-color: #dc7023;
+    color: white;
+    font-weight: bold;
+}
+
+.water {
+    background-color: #6890F0;
+    color: white;
+    font-weight: bold;
+}
+
+.grass {
+    background-color: #78C850;
+    color: black;
+    font-weight: bold;
+}
+
+.electric {
+    background-color: #F8D030;
+    color: black;
+    font-weight: bold;
+}
+
+.ice {
+    background-color: #98D8D8;
+    color: black;
+    font-weight: bold;
+}
+
+.fighting {
+    background-color: #C03028;
+    color: white;
+    font-weight: bold;
+}
+
+.poison {
+    background-color: #A040A0;
+    color: white;
+    font-weight: bold;
+}
+
+.ground {
+    background-color: #E0C068;
+    color: black;
+    font-weight: bold;
+}
+
+.flying {
+    background-color: #A890F0;
+    color: black;
+    font-weight: bold;
+}
+
+.psychic {
+    background-color: #F85888;
+    color: white;
+    font-weight: bold;
+}
+
+.bug {
+    background-color: #A8B820;
+    color: black;
+    font-weight: bold;
+}
+
+.rock {
+    background-color: #B8A038;
+    color: black;
+    font-weight: bold;
+}
+
+.ghost {
+    background-color: #705898;
+    color: white;
+    font-weight: bold;
+}
+
+.dark {
+    background-color: #705848;
+    color: white;
+    font-weight: bold;
+}
+
+.dragon {
+    background-color: #7038F8;
+    color: white;
+    font-weight: bold;
+}
+
+.steel {
+    background-color: #B8B8D0;
+    color: black;
+    font-weight: bold;
+}
+
+.fairy {
+    background-color: #F0B6BC;
+    color: black;
+    font-weight: bold;
+}
