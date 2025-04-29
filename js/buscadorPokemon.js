@@ -26,4 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
     });
+
+    // Agregar evento para solucionar bug del boton enter en el campo de búsqueda
+    intputBuscar.addEventListener("keypress", function(event) {
+        // Si la tecla presionada es Enter (código 13)
+        if (event.key === "Enter") {
+            // Prevenir el comportamiento por defecto
+            event.preventDefault();
+            // Simular clic en el botón de búsqueda
+            botonBuscar.click();
+        }
+    });
 });
