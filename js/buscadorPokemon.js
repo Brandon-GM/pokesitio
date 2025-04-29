@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const botonBuscar = document.getElementById("btnBuscar");
     
     // Agregar un evento de clic al botón
-    botonBuscar.addEventListener("click", function() {
+    botonBuscar.addEventListener("click", function(event) {
+
+        event.preventDefault();
  
         const pokemonBuscado = intputBuscar.value;
         const mostrarModal = document.getElementById('mostrarModal');
